@@ -18,8 +18,4 @@ public class SampleController {
         return "this is uri2";
     }
 
-    @GetMapping("/uri3")
-    public String getUri3() {
-        return "this is uri3";
-    }
 }

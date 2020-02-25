@@ -10,7 +10,7 @@ public class SampleControllerV2 {
 
     @GetMapping(path = {"/uri1", "/another-uri1"})
     public String getUri1() {
-        return "this is uri1";
+        return "this is uri1 v2 implementation";
     }
 
 }
