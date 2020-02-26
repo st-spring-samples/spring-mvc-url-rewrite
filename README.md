@@ -28,6 +28,6 @@ Unnecessarily increment version number for lot of other resources just because o
 # Remarks
 This is not a good situation to be in. But we are not living in an ideal world. From time to time we need to work with monolith applications and this could be a valid scenario in that context.
 # Implementation detail
-During application startup,
-- Verify that application support multiple versions of APIs (`application.api.supportedVersions` configuration)
-- For each mapping defined in the application, derive a new mapping with higher version (if one doesn't exist already)
+My initial plan was to write a custom implementation to dynamically modify request handler mappings. But after spending quite a bit of time, I found that it is not straightforward and error prone.
+
+While searching for alternatives, I found that it is not required to write any custom implementation to dynamically edit request handler mappings during startup. Spring MVC powerful request matching ability enables this behavior by default. See [SampleController](src/main/java/com/sudhirt/samples/urlrewrite/controller/SampleController.java) and [SampleControllerV2](src/main/java/com/sudhirt/samples/urlrewrite/controller/SampleControllerV2.java) for details. 
