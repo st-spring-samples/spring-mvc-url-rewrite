@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/v2")
-public class SampleControllerV2 {
+public class OrderControllerV2 {
 
-    @GetMapping(path = {"/uri1", "/another-uri1"})
+    @GetMapping(path = {"/orders", "/order$"})
     public String getUri1() {
-        return "this is uri1 v2 implementation";
+        return "this is orders v2 implementation";
     }
 
 }

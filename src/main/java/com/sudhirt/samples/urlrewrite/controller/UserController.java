@@ -5,17 +5,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/v*")
-public class SampleController {
+public class UserController {
 
-    @GetMapping(path = {"/uri1", "/another-uri1"})
+    @GetMapping("/v*/users")
     public String getUri1() {
-        return "this is uri1";
+        return "this is users";
     }
 
-    @GetMapping("/uri2")
+    @GetMapping("/v*/users/{1}/cards")
     public String getUri2() {
-        return "this is uri2";
+        return "this is cards";
+    }
+
+    @GetMapping("/v2/users")
+    public String getUri1V2() {
+        return "this is users v2 implementation";
     }
 
 }

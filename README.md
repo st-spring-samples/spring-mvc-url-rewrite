@@ -30,4 +30,6 @@ This is not a good situation to be in. But we are not living in an ideal world. 
 # Implementation detail
 My initial plan was to write a custom implementation to dynamically modify request handler mappings. But after spending quite a bit of time, I found that it is not straightforward and error prone.
 
-While searching for alternatives, I found that it is not required to write any custom implementation to dynamically edit request handler mappings during startup. Spring MVC powerful request matching ability enables this behavior by default. See [SampleController](src/main/java/com/sudhirt/samples/urlrewrite/controller/SampleController.java) and [SampleControllerV2](src/main/java/com/sudhirt/samples/urlrewrite/controller/SampleControllerV2.java) for details. 
+While searching for alternatives, I found that it is not required to write any custom implementation to dynamically edit request handler mappings during startup. Spring MVC powerful request matching ability enables this behavior by default.
+
+See [OrderController](src/main/java/com/sudhirt/samples/urlrewrite/controller/OrderController.java), [OrderControllerV2](src/main/java/com/sudhirt/samples/urlrewrite/controller/OrderControllerV2.java) and [UserController](src/main/java/com/sudhirt/samples/urlrewrite/controller/UserController.java) for details. 
